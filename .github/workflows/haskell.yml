@@ -1,0 +1,10 @@
+name: Test
+
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: bubba/actions/setup@matcher
+    - run: ghc Foo.hs -Wall
